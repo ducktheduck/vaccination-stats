@@ -1,0 +1,72 @@
+/** Fonts **/
+
+    @font-face {
+        font-family: fallingSky;
+        src: url('../meta/fonts/fallingskycond.otf');
+    }
+
+/** Fonts **/
+
+/** Main parts **/
+
+    html {
+        background-color: #0f0f0f;
+        margin: 0 auto;
+        padding: 0;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        
+    }
+    body {
+
+        margin: 0 auto;
+        padding: 0;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+
+
+/** Main parts **/
+
+
+/** Head **/
+
+    #title{
+            
+        text-align: center;
+        font-family: fallingSky;
+        font-weight: 500;
+        font-size: 90px;
+        color: white;
+
+
+    }
+
+    #subtitle{
+
+        text-align: center;
+        color: #e6e6e6;
+        margin-top: -80px;
+        font-family: fallingSky;
+        font-weight: 100;
+        font-size: 40px;
+        
+    }
+
+    #red-letter{
+
+        color:#eb3434;
+        font-size: 55px;
+        font-weight: 700;
+
+    }
+
+    #red-letter:hover{
+        color: #a01c1c;
+        transition: ease-in-out 1s;
+        cursor: pointer;
+        
+    }
+
+/** Head **/
