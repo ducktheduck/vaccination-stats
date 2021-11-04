@@ -1,2 +1,2 @@
-# infection-rate
-A website that displays the infection rate in Romanian Counties
+# vaccination stats
+A website that displays the Covid-19 Vaccination Stats in Romania
