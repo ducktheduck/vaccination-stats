@@ -1,30 +1,25 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import fetch from '../public/src/fetch'
 
 // Exporting the default function, home page
 export default function Home() {
 
-  // Declared variables so they can be used later in code when we return the page
-  let date;
+  // Declared URLs and the main class for fetching data
+  let URLVaccination = 'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.json';
+  let URLCovid = 'https://covid.ourworldindata.org/data/owid-covid-data.json';
 
-  // Fetching the data from an open-source API
-  fetch('https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.json')
-    .then(res => res.json())
-      .then(data => {
-      
-        // Declaring the current day
-        let day = data[171]["data"].length;
-        // Declaring the data we are going to use
-        let countryData = data[171]["data"][day-1]
-        // Defining the current date
-        date = countryData["date"]
+  let FetchingClass = new fetch()
 
-        // Debugging
-        console.log(countryData)
-        console.log (date)
+  // Declared variables that contains raw data
+  let VacData = FetchingClass.fetchData(URLVaccination)
+  let CovData = FetchingClass.fetchData(URLCovid)
 
-  })
+  // Debugging
+  console.log(VacData)
+  console.log(CovData)
+
   return (
 
     <div className = {styles.container}>
