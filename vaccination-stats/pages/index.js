@@ -3,6 +3,8 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import fetch from '../public/src/fetch'
 
+let Fetch = require('../public/src/fetch')
+
 // Exporting the default function, home page
 export default function Home() {
 
@@ -10,15 +12,15 @@ export default function Home() {
   let URLVaccination = 'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/vaccinations.json';
   let URLCovid = 'https://covid.ourworldindata.org/data/owid-covid-data.json';
 
-  let FetchingClass = new fetch()
+  let FetchingClass = new Fetch()
 
   // Declared variables that contains raw data
   let VacData = FetchingClass.fetchData(URLVaccination)
-  let CovData = FetchingClass.fetchData(URLCovid)
+  //let CovData = FetchingClass.fetchData(URLCovid)
 
   // Debugging
-  console.log(VacData)
-  console.log(CovData)
+  console.log(FetchingClass.cefama)
+  //console.log(CovData)
 
   return (
 
