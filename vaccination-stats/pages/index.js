@@ -19,6 +19,7 @@ export default function Home() {
   //let CovData = FetchingClass.fetchData(URLCovid)
 
   // Debugging
+  console.log('ce fa maaa')
   console.log(FetchingClass.cefama)
   //console.log(CovData)
 
